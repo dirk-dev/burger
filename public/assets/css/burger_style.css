@@ -9,9 +9,13 @@ body {
     text-align: center;
 }
 
+ol {
+    font-size: 20px;
+    line-height: 45px;
+}
 
-#burger-form {
-    height: 150px;
+.burger-delete {
+    height: 45px;
 }
 
 .form-group {

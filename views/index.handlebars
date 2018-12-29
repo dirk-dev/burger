@@ -6,9 +6,27 @@
     <br>
 
     <div id="left-content">
+        <ol>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+                {{burger_name}}
+                <button class="burger-delete" data-id="{{this.id}}">Devour It!</button>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
     </div>
 
     <div id="right-content">
+        <ol>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{burger_name}}
+
+            {{/if}}
+            {{/each}}
+        </ol>
     </div>
 
     <form>
