@@ -1,19 +1,20 @@
 var express = require("express");
-var app = express();
+var router = express.Router();
+
 
 // Import the model to use its database functions.
-var burger = require("../models/burger.js");
-
+var orm = require("../config/orm.js");
 
 //routes
-app.get("/", function (req, res) {
-    connection.query("SELECT * FROM burger;", function (err, data) {
-        if (err) throw err;
-        console.log(data)
-        //this makes an array an object - Handlebars expects an object
-        res.render("index", {
-            burgers: data
-        });
+router.get("/", function (req, res) {
+    console.log('I am here')
+    orm.selectAll(function (data) {
+        var hbsObject = {
+            burgers: data // not getting executed
+        };
+        console.log('burger controller: ', hbsObject);
+        res.render("index", hbsObject);
     });
-
 });
+
+module.exports = router;

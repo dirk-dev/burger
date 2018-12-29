@@ -3,13 +3,15 @@ var connection = require("../config/connection.js");
 
 var orm = {
 
-    SelectAll: function () {
+    selectAll: function (cb) {
         var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, function (err, res) {
-            if (err) throw err;
-            console.log(result);
+            if (err) {
+                throw err
+            };
+            console.log('response: ', res); //this works
+            cb(res)
         })
-
     },
 
     insertOne: function () {
