@@ -4,14 +4,54 @@ body {
         sans-serif;
 }
 
+.container {
+    width: 100%;
+}
+
 #burger-img {
     margin: 0 auto;
     text-align: center;
 }
 
-ol {
+#left-content {
+    float: left;
+    width: 50%;
+    display: flex;
+
+}
+
+.uneaten-burger {
+    background-color: aliceblue;
+    padding: 10px;
+    width: 350px;
+}
+
+.eaten-burger {
+    background-color: aliceblue;
+    padding: 10px;
+    width: 350px;
+    opacity: .65;
+}
+
+
+
+br {
+    display: block;
+    margin-top: 5px;
+    line-height: 15px;
+}
+
+#right-content {
+    float: right;
+    width: 50%;
+    display: flex;
+
+}
+
+ul {
     font-size: 20px;
     line-height: 45px;
+    list-style-type: none;
 }
 
 .burger-delete {

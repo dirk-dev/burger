@@ -1,45 +1,54 @@
+<br>
+<div id="burger-img"><img src="../assets/images/hamburger-3184108_640.png">
+</div>
+<h1>Eat-Da-Burger!</h1>
+<br>
 <div class="container">
-    <br>
-    <div id="burger-img"><img src="../assets/images/hamburger-3184108_640.png">
-    </div>
-    <h1>Eat-Da-Burger!</h1>
-    <br>
 
     <div id="left-content">
-        <ol>
+        <ul>
             {{#each burgers}}
             {{#unless devoured}}
-            <li>
-                {{burger_name}}
+            <div class="uneaten-group">
+                <div class="uneaten-burger">
+                    <li>
+                        {{id}}. {{burger_name}}
+                    </li>
+                </div>
                 <button class="burger-delete" data-id="{{this.id}}">Devour It!</button>
-            </li>
+            </div>
+            <br>
             {{/unless}}
             {{/each}}
-        </ol>
+        </ul>
     </div>
 
     <div id="right-content">
-        <ol>
+        <ul>
             {{#each burgers}}
             {{#if devoured}}
-            {{burger_name}}
+            <div class="eaten-burger">
+                <li>
+                    {{id}}. {{burger_name}}
+                </li>
+            </div>
 
             {{/if}}
             {{/each}}
-        </ol>
+        </ul>
     </div>
-
-    <form>
-        <div class="text-center">
-            <div class="form-group">
-                <div id="burger-div">
-                    <input type="text" class="form-control" id="burger-form" required>
-                </div>
-                <br>
-                <button class="btn btn-primary" id="burger-button" type="submit">Submit</button>
-            </div>
-    </form>
 </div>
+
+<form>
+    <div class="text-center">
+        <div class="form-group">
+            <div id="burger-div">
+                <input type="text" class="form-control" id="burger-form" required>
+            </div>
+            <br>
+            <button class="btn btn-primary" id="burger-button" type="submit">Submit</button>
+        </div>
+</form>
 </div>
 <br>
 <h3>Enter a burger you want to eat and click the "Submit" button.</h3>
