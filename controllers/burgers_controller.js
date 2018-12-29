@@ -6,14 +6,14 @@ var router = express.Router();
 var orm = require("../config/orm.js");
 
 //routes
-router.get("/", function (req, res) {
+router.get("/index", function (req, res) {
     console.log('I am here')
     orm.selectAll(function (data) {
-        var hbsObject = {
+        var burgerObject = {
             burgers: data // not getting executed
         };
-        console.log('burger controller: ', hbsObject);
-        res.render("index", hbsObject);
+        console.log('burger controller: ', burgerObject);
+        res.render("index", burgerObject);
     });
 });
 
