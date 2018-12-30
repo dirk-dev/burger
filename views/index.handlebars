@@ -3,52 +3,54 @@
 </div>
 <h1>Eat-Da-Burger!</h1>
 <br>
-<div class="container">
 
-    <div id="left-content">
-        <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-            <div class="uneaten-group">
-                <div class="uneaten-burger">
-                    <li>
-                        {{id}}. {{burger_name}}
-                    </li>
-                </div>
-                <button class="burger-delete" data-id="{{this.id}}">Devour It!</button>
-            </div>
-            <br>
-            {{/unless}}
-            {{/each}}
-        </ul>
-    </div>
-
-    <div id="right-content">
-        <ul>
-            {{#each burgers}}
-            {{#if devoured}}
-            <div class="eaten-burger">
+<div id="left-content">
+    <h3 class="column-header">Burgers to eat!</h3>
+    <ul>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <div id="uneaten-group-div">
+            <div class="uneaten-burger-list">
                 <li>
                     {{id}}. {{burger_name}}
                 </li>
             </div>
-
-            {{/if}}
-            {{/each}}
-        </ul>
-    </div>
+            <button class="burger-delete" data-id="{{this.id}}">Devour It!</button>
+        </div>
+        <br>
+        {{/unless}}
+        {{/each}}
+    </ul>
 </div>
+
+<div id="right-content">
+    <h3 class="column-header">Burgers that have been eaten.</h3>
+    <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <div class="eaten-burger-list">
+            <li>
+                {{id}}. {{burger_name}}
+            </li>
+        </div>
+
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
 
 <form>
     <div class="text-center">
         <div class="form-group">
             <div id="burger-div">
-                <input type="text" class="form-control" id="burger-form" required>
+                <input type="text" class="form-control" id="submit-form" required>
             </div>
             <br>
             <button class="btn btn-primary" id="burger-button" type="submit">Submit</button>
         </div>
+    </div>
 </form>
-</div>
+
 <br>
 <h3>Enter a burger you want to eat and click the "Submit" button.</h3>
