@@ -4,47 +4,48 @@
 <h1>Eat-Da-Burger!</h1>
 <br>
 
-<div id="left-content">
-    <h3 class="column-header">Burgers to eat!</h3>
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <div id="uneaten-group-div">
-            <div class="uneaten-burger-list">
+<div id="grid-container">
+    <div id="left-content">
+        <h3 class="column-header">Burgers to eat!</h3>
+        <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div id="uneaten-burger-div">
+                <div class="uneaten-burger-list">
+                    <li>
+                        {{id}}. {{burger_name}}
+                    </li>
+                </div>
+                <button class="burger-delete-button" data-id="{{this.id}}">Devour It!</button>
+            </div>
+            {{!-- <br> --}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="right-content">
+        <h3 class="column-header">Burgers that have been eaten.</h3>
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="eaten-burger-list">
                 <li>
                     {{id}}. {{burger_name}}
                 </li>
             </div>
-            <button class="burger-delete" data-id="{{this.id}}">Devour It!</button>
-        </div>
-        <br>
-        {{/unless}}
-        {{/each}}
-    </ul>
+
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
 </div>
-
-<div id="right-content">
-    <h3 class="column-header">Burgers that have been eaten.</h3>
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        <div class="eaten-burger-list">
-            <li>
-                {{id}}. {{burger_name}}
-            </li>
-        </div>
-
-        {{/if}}
-        {{/each}}
-    </ul>
-</div>
-
-
-<form>
+<br>
+<form class="create-form">
     <div class="text-center">
         <div class="form-group">
             <div id="burger-div">
-                <input type="text" class="form-control" id="submit-form" required>
+                <input type="text" class="form-control" id="new-burger" required>
             </div>
             <br>
             <button class="btn btn-primary" id="burger-button" type="submit">Submit</button>

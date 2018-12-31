@@ -8,15 +8,15 @@ body {
     text-align: center;
 }
 
-.container {
+#grid-container {
     margin: 0;
 }
 
 #left-content {
     float: left;
     width: 50%;
-    margin: 0;
-    background-color: greenyellow;
+    /* margin: 0 auto; */
+    background-color: green;
 }
 
 #right-content {
@@ -26,9 +26,12 @@ body {
     background-color: blueviolet;
 }
 
-#uneaten-group-div {
+#uneaten-burger-div {
     display: grid;
     grid-template-columns: 70% 30%;
+    grid-gap: 10px;
+    /* grid-row-gap: 25px; */
+
 }
 
 .uneaten-burger-list {
@@ -37,7 +40,7 @@ body {
     padding: 0 10px;
 }
 
-.burger-delete {
+.burger-delete-button {
     width: 120px;
     background-color: #007bff;
     color: white;
@@ -45,6 +48,7 @@ body {
 
 .eaten-burger-list {
     background-color: aliceblue;
+    margin: 0 auto;
     padding: 0 10px;
     width: 350px;
     opacity: .65;
@@ -53,10 +57,6 @@ body {
 ul {
     font-size: 20px;
     list-style-type: none;
-}
-
-.burger-delete {
-    height: 45px;
 }
 
 .form-group {
@@ -81,5 +81,3 @@ h3 {
     font-size: 24px;
     font-weight: bold;
 }
-
-br {}
