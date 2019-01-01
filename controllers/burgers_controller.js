@@ -12,7 +12,7 @@ router.get("/index", function (req, res) {
         var burgerObject = {
             burgers: data
         };
-        console.log('burgers_controller get route: ', burgerObject);
+        // console.log('burgers_controller get route: ', burgerObject);
         res.render("index", burgerObject);
     });
 });
@@ -30,6 +30,24 @@ router.post("/api/burgers", function (req, res) {
         res.json({
             id: result.insertId
         });
+    });
+});
+
+//change burger status to devoured
+router.put("/api/burgers/:id", function (req, res) {
+    var condition = req.params.id;
+
+    console.log("b_c condition id = ", condition);
+
+    orm.updateBurger({
+        devoured: req.body.devoured
+    }, condition, function (result) {
+        if (result.changedRows == 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
     });
 });
 

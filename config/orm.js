@@ -18,13 +18,12 @@ var orm = {
     insertBurger: function (vals) {
         var queryString = "INSERT INTO burgers (burger_name) ";
         queryString += "VALUES (";
-        //will I need quotes to wrap the burger_name?
         queryString += "'";
         queryString += vals;
         queryString += "'";
         queryString += ");";
 
-        console.log("SQL query = ", queryString)
+        console.log("SQL Insert query = ", queryString)
 
         connection.query(queryString, vals, function (err, res) {
             if (err) {
@@ -34,10 +33,22 @@ var orm = {
         })
     },
 
-    updateOne: function () {
-        var queryString = "UPDATE INTO burgers "
-        connection.query(queryString)
+    updateBurger: function (condition, val) {
+        var queryString = "UPDATE burgers SET devoured = 1"
+        console.log("CONDITION: ID = ", val)
+        queryString += " WHERE ";
+        queryString += "id = ";
+        queryString += val;
 
+        console.log("SQL Update query = ", queryString)
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            // cb(result);
+        });
     }
 
 }
