@@ -2,6 +2,7 @@ body {
     background-color: rgb(212, 202, 179);
     font-family: 'Catamaran',
         sans-serif;
+    width: auto;
 }
 
 #burger-img {
@@ -9,29 +10,30 @@ body {
 }
 
 #grid-container {
-    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
+
+/* #left-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
 
 #left-content {
-    float: left;
-    width: 50%;
-    /* background-color: green; */
+    background-color: green;
+    align-content: center;
 }
 
-#right-content {
-    float: left;
-    width: 50%;
-    /* background-color: blueviolet; */
-}
-
-#uneaten-burger-div {
+.uneaten-burger-div {
     display: inline-flex;
-    margin: 5px 5%;
+    margin: 5px auto;
 }
 
-#uneaten-burger-list {
+.uneaten-burger-list {
     background-color: aliceblue;
-    width: 350px;
+    width: 375px;
     padding: 0 10px;
     margin: 0 15px 0 0;
 }
@@ -41,14 +43,14 @@ body {
     width: 120px;
     background-color: #08236d;
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-#eaten-burger-list {
+.eaten-burger-list {
     background-color: aliceblue;
     margin: 10px auto;
     padding: 0 10px;
-    width: 350px;
+    width: 70%;
     opacity: .7;
 }
 
@@ -58,7 +60,7 @@ ul {
 }
 
 .form-group {
-    width: 45%;
+    width: 55%;
     margin: 0 auto;
 }
 
@@ -80,48 +82,44 @@ h3 {
     font-weight: bold;
 }
 
+
 @media only screen and (min-width: 2480px) {
-    #left-content {
-        padding: 0 5%;
+    html {
+        max-width: 1440px;
+        align-content: center;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
 }
 
-@media only screen and (max-width: 1350px) {
+/* @media only screen and (max-width: 1350px) {
+
     #uneaten-burger-div {
-        display: inline-flex;
-        /* margin: 5px 5%; */
+        margin: 5px 5%;
     }
-}
+} */
 
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1150px) {
     h1 {
-        font-size: 60px;
+        font-size: 50px;
     }
 
     #burger-image {
-        width: 50%;
-        height: 50%;
-    }
-
-    #uneaten-burger-div {
-        margin: 0 auto;
-    }
-
-    #left-content,
-    #right-content {
-        float: none;
-        display: block;
-        width: 100%;
-    }
-
-    #uneaten-burger-list {
-        width: 290px;
-        padding: 0 10px;
-        margin: 0 15px 0 0;
+        width: 40%;
+        height: 40%;
     }
 
     ul {
         font-size: 18px;
     }
 
+    #grid-container {
+        display: block;
+    }
+
+    .eaten-burger-list,
+    .uneaten-burger-div {
+        width: 100%;
+    }
 }

@@ -1,24 +1,27 @@
+<br>
 <div id="burger-img"><img src="../assets/images/hamburger-3184108_640.png" id="burger-image">
 </div>
 <h1>Eat-Da-Burger!</h1>
-<br>
 
 <div id="grid-container">
     <div id="left-content">
+
         <h3 class="column-header">Burgers to eat!</h3>
         <ul>
-            {{#each burgers}}
-            {{#unless devoured}}
-            <div id="uneaten-burger-div">
-                <div id="uneaten-burger-list">
-                    <li>
-                        {{id}}. {{burger_name}}
-                    </li>
+            <div id="left-container">
+                {{#each burgers}}
+                {{#unless devoured}}
+                <div class="uneaten-burger-div">
+                    <div class="uneaten-burger-list">
+                        <li>
+                            {{id}}. {{burger_name}}
+                        </li>
+                    </div>
+                    <button class="burger-delete-button" data-id="{{this.id}}">Devour It!</button>
                 </div>
-                <button class="burger-delete-button" data-id="{{this.id}}">Devour It!</button>
+                {{/unless}}
+                {{/each}}
             </div>
-            {{/unless}}
-            {{/each}}
         </ul>
     </div>
 
@@ -27,7 +30,7 @@
         <ul>
             {{#each burgers}}
             {{#if devoured}}
-            <div id="eaten-burger-list">
+            <div class="eaten-burger-list">
                 <li>
                     {{id}}. {{burger_name}}
                 </li>
