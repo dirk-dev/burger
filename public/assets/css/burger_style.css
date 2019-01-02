@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 227, 155);
+    background-color: rgb(212, 202, 179);
     font-family: 'Catamaran',
         sans-serif;
 }
@@ -15,43 +15,42 @@ body {
 #left-content {
     float: left;
     width: 50%;
-    /* margin: 0 auto; */
     background-color: green;
+    text-align: center;
 }
 
 #right-content {
-    float: right;
+    float: left;
     width: 50%;
-    margin: 0;
     background-color: blueviolet;
 }
 
 #uneaten-burger-div {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-gap: 10px;
-    /* grid-row-gap: 25px; */
-
+    display: inline-flex;
+    margin: 5px 5%;
 }
 
-.uneaten-burger-list {
+#uneaten-burger-list {
     background-color: aliceblue;
     width: 350px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    margin: 0 15px 0 0;
 }
 
-.burger-delete-button {
+.burger-delete-button,
+.btn {
     width: 120px;
-    background-color: #007bff;
+    background-color: #08236d;
     color: white;
+    border-radius: 10px;
 }
 
-.eaten-burger-list {
+#eaten-burger-list {
     background-color: aliceblue;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 0 10px;
     width: 350px;
-    opacity: .65;
+    opacity: .7;
 }
 
 ul {
@@ -78,6 +77,14 @@ h1 {
 
 h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
 }
+
+@media only screen and (min-width: 2480px) {
+    #left-content {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 1120px) {}
