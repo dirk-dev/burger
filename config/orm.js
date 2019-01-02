@@ -15,7 +15,7 @@ var orm = {
     },
 
     //this is a post to add a new burger to the DB
-    insertBurger: function (vals) {
+    insertBurger: function (vals, cb) {
         var queryString = "INSERT INTO burgers (burger_name) ";
         queryString += "VALUES (";
         queryString += "'";
@@ -25,17 +25,17 @@ var orm = {
 
         console.log("SQL Insert query = ", queryString)
 
-        connection.query(queryString, vals, function (err, res) {
+        connection.query(queryString, vals, function (err, result) {
             if (err) {
                 throw err
             };
-            // cb(res)
+            cb(result)
         })
     },
 
-    updateBurger: function (condition, val) {
+    updateBurger: function (condition, val, cb) {
         var queryString = "UPDATE burgers SET devoured = 1"
-        console.log("CONDITION: ID = ", val)
+        // console.log("CONDITION: ID = ", val)
         queryString += " WHERE ";
         queryString += "id = ";
         queryString += val;
@@ -47,7 +47,7 @@ var orm = {
                 throw err;
             }
 
-            // cb(result);
+            cb(result);
         });
     }
 

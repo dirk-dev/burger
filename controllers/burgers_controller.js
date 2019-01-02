@@ -18,18 +18,13 @@ router.get("/index", function (req, res) {
 });
 
 //add new burger to DB
-//req returns object.object
 router.post("/api/burgers", function (req, res) {
     console.log('router.post: ', req.body.burger_name)
     orm.insertBurger([
         req.body.burger_name
-    ], [
-        req.body.burger_name
     ], function (result) {
-        console.log("results from post", res)
-        res.json({
-            id: result.insertId
-        });
+        console.log("results from post", result)
+        res.redirect("/index");
     });
 });
 

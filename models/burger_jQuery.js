@@ -20,7 +20,6 @@ $(function () {
         );
     });
 
-
     //changes burger state to devoured
     $(".burger-delete-button").on("click", function (event) {
         var id = $(this).data("id");
