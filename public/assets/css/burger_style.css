@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(212, 202, 179);
+    background-color: rgb(235, 225, 170);
     font-family: 'Catamaran',
         sans-serif;
     width: auto;
@@ -14,15 +14,9 @@ body {
     grid-template-columns: 50% 50%;
 }
 
-/* #left-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-} */
-
-#left-content {
-    background-color: green;
+#left-content,
+#right-content {
+    /* background-color: green; */
     align-content: center;
 }
 
@@ -93,17 +87,8 @@ h3 {
     }
 }
 
-/* @media only screen and (max-width: 1350px) {
-
-    #uneaten-burger-div {
-        margin: 5px 5%;
-    }
-} */
-
 @media only screen and (max-width: 1150px) {
-    h1 {
-        font-size: 50px;
-    }
+
 
     #burger-image {
         width: 40%;
@@ -120,6 +105,29 @@ h3 {
 
     .eaten-burger-list,
     .uneaten-burger-div {
-        width: 100%;
+        width: 90%;
     }
+}
+
+@media only screen and (max-width: 545px) {
+
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    .burger-delete-button {
+        width: 80px;
+        font-size: 15px;
+    }
+
+    .eaten-burger-list {
+        margin: 10px 0;
+        width: 90%;
+        opacity: .7;
+
+    }
+
 }

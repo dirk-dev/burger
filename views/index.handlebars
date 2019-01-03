@@ -5,23 +5,20 @@
 
 <div id="grid-container">
     <div id="left-content">
-
         <h3 class="column-header">Burgers to eat!</h3>
         <ul>
-            <div id="left-container">
-                {{#each burgers}}
-                {{#unless devoured}}
-                <div class="uneaten-burger-div">
-                    <div class="uneaten-burger-list">
-                        <li>
-                            {{id}}. {{burger_name}}
-                        </li>
-                    </div>
-                    <button class="burger-delete-button" data-id="{{this.id}}">Devour It!</button>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="uneaten-burger-div">
+                <div class="uneaten-burger-list">
+                    <li>
+                        {{id}}. {{burger_name}}
+                    </li>
                 </div>
-                {{/unless}}
-                {{/each}}
+                <button class="burger-delete-button" data-id="{{this.id}}">Devour It!</button>
             </div>
+            {{/unless}}
+            {{/each}}
         </ul>
     </div>
 
