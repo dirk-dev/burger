@@ -7,18 +7,12 @@ body {
 
 #burger-img {
     text-align: center;
-}
-
-#left-content {
-    background-color: green;
-}
-
-#right-content {
-    background-color: rgb(18, 235, 18);
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px rgb(22, 22, 22));
 }
 
 .uneaten-burger-div {
-    display: inline-flex;
+    display: flex;
     margin: 5px auto;
 }
 
@@ -35,11 +29,17 @@ body {
     background-color: #08236d;
     color: white;
     border-radius: 5px;
+    border-color: #04206b;
 }
+
+.burger-delete-button:hover {
+    background-color: #007bff;
+}
+
 
 .eaten-burger-list {
     background-color: aliceblue;
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 0 10px;
     width: 70%;
     opacity: .7;
@@ -48,7 +48,6 @@ body {
 ul {
     font-size: 20px;
     list-style-type: none;
-    margin: 0;
 }
 
 .form-group {
@@ -66,6 +65,7 @@ h1 {
     font-size: 85px;
     color: red;
     text-align: center;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px rgb(18, 18, 73);
 }
 
 h3 {
@@ -73,17 +73,6 @@ h3 {
     font-size: 28px;
     font-weight: bold;
     color: darkred;
-}
-
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.col,
-[class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
 }
 
 
@@ -123,8 +112,13 @@ h3 {
 
 @media only screen and (max-width: 375px) {
 
+    h3 {
+        font-size: 20px;
+    }
+
     .burger-delete-button {
         width: 80px;
+        height: 28px;
         font-size: 15px;
     }
 
@@ -132,6 +126,10 @@ h3 {
         margin: 10px 0;
         width: 90%;
         opacity: .7;
+    }
+
+    ul {
+        font-size: 16px;
     }
 
 }
