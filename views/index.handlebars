@@ -3,8 +3,8 @@
 </div>
 <h1>Eat-Da-Burger!</h1>
 
-<div id="grid-container">
-    <div id="left-content">
+<div class="row no-gutters">
+    <div class="col-md-6 col-sm-12" id="left-content">
         <h3 class="column-header">Burgers to eat!</h3>
         <ul>
             {{#each burgers}}
@@ -20,9 +20,10 @@
             {{/unless}}
             {{/each}}
         </ul>
+        <br>
     </div>
 
-    <div id="right-content">
+    <div class="col-md-6 col-sm-12" id="right-content">
         <h3 class="column-header">Burgers that have been eaten.</h3>
         <ul>
             {{#each burgers}}
