@@ -6,7 +6,7 @@ var router = express.Router();
 var orm = require("../config/orm.js");
 
 //routes
-router.get("/index", function (req, res) {
+router.get("/", function (req, res) {
     // console.log('I am here')
     orm.selectAll(function (data) {
         var burgerObject = {
@@ -24,7 +24,7 @@ router.post("/api/burgers", function (req, res) {
         req.body.burger_name
     ], function (result) {
         console.log("results from post", result)
-        res.redirect("/index");
+        res.redirect("/");
     });
 });
 
