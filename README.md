@@ -37,12 +37,12 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 
 3. At the command line, navigate to the directory where the server.js file is located and type `npm i` - this will read the `package.json` file and install any needed packages. They will be installed into a node_modules folder.
 
-4. Open `connection.js` in a text editor and change the connection info as needed to match the settings in your MySQL server and save it. In `server.js` take note of the port number at the top. If you are on a Mac, the port number in `connection.js` should be8889; on a Windows machine, it should be 3306.
+4. Open `connection.js` in a text editor and change the connection info as needed to match the settings in your MySQL server and save it. In `server.js` take note of the port number at the top. If you are on a Mac, the port number in `connection.js` should be 8889; on a Windows machine, it should be 3306.
 
 #### How to use burger locally:
 1. Navigate in the command line to the directory where the server.js file located. Type `node server` at the prompt. This will run the server portion of the app.
 
-2. Open a now web browser window. Type `localhost:3000/index` to run the client portion of the app.
+2. Open a new web browser window. Type `localhost:3000/index` to run the client portion of the app.
 
 
 ## Technologies used:
