@@ -1,10 +1,12 @@
-# Eat a Burger
+# Eat da Burger
 
-![Eat a Burger app](./public/assets/images/burgers_app.png)
+![Eat da Burger app](./public/assets/images/burgers_app.png)
+
+## Deployed App: https://powerful-crag-42305.herokuapp.com/
 
 ## Summary
 
-The user inputs the burger(s) they would like to eat to the `Eat a Burger` app. The app does a `POST` of user input to a MySQL database and updates the screen to reflect any additions. There is also `schema.sql` & `seeds.sql` files to set up the database and add the initial values.
+The user inputs the burger(s) they would like to eat to the `Eat da Burger` app. The app does a `POST` of user input to a MySQL database and updates the screen to reflect any additions. There is also `schema.sql` & `seeds.sql` files to set up the database and add the initial values.
 
 Each item has a button that allows the user to chose a burger to 'devour'. Clicking that button triggers a `PUT`, which updates the values in the database to reflect that the burger has been eaten, and the screen is updated to reflect this change.
 
@@ -21,7 +23,7 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 
 #### Setup - MySQL/MAMP
 
-1. You will need to have a MySQL server running to use this app. MAMP is free software that runs a MySQL server on your local machine. Their URL can be found in the `Technologies Used` section below. Once you have a MySQL server running, take note of the `host`, `port`, `user` and `password` info on the server. On MAMP, this can be accessed clicking on the `open start page` icon on the MAMP app.
+1. You will need to have a MySQL server running to use this app locally. MAMP is free software that runs a MySQL server on your local machine. Their URL can be found in the `Technologies Used` section below. Once you have a MySQL server running, take note of the `host`, `port`, `user` and `password` info on the server. On MAMP, this can be accessed clicking on the `open start page` icon on the MAMP app.
 
 2. Install and configure the MySQL database app. For `MySQL Workbench`, on the start screen, click on the add or edit icons next to `MySQL Connections` and check that the settings correspond to the MAMP settings. The password is normally `root`. Once the settings are entered, click the `Test Connection` button to confirm that the connection is working.
 
@@ -39,13 +41,13 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 
 1. If not installed already, download & install `Node.js` on your computer.
 
-2. Copy all the supplied the files to the directory you wish to run `burger` from.
+2. Copy all the supplied the files to the directory you wish to run `Eat da Burger` from.
 
 3. At the command line, navigate to the directory where the server.js file is located and type `npm i` - this will read the `package.json` file and install any needed packages. They will be installed into a node_modules folder.
 
 4. Open `connection.js` in a text editor and change the connection info as needed to match the settings in your MySQL server and save it. In `server.js` take note of the port number at the top. If you are on a Mac, the port number in `connection.js` should be 8889; on a Windows machine, it should be 3306.
 
-#### How to use burger locally:
+#### How to use Eat da Burger locally:
 
 1. Navigate in the command line to the directory where the server.js file located. Type `node server` at the prompt. This will run the server portion of the app.
 
@@ -56,7 +58,7 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 - Express npm package - https://www.npmjs.com/package/express
 - Google Fonts - https://fonts.google.com/
 - Handlebars templating engine - https://handlebarsjs.com/
-- Heroku - for deployment -
+- Heroku - for deployment - https://heroku.com
 - JavaScript
 - jQuery - http://jquery.com/
 - MySQL Workbench - https://www.mysql.com/products/workbench/
