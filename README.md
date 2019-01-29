@@ -1,16 +1,30 @@
-# Eat da Burger
+# Eat Da Burger
 
-![Eat da Burger app](./public/assets/images/burgers_app.png)
+![Eat Da Burger app](./public/assets/images/burgers_app.png)
 
-## [Deployed App](https://powerful-crag-42305.herokuapp.com/)
+## [Eat Da Burger deployed app](https://powerful-crag-42305.herokuapp.com/)
 
-## Summary
+---
 
-The user inputs the burger(s) they would like to eat to the `Eat da Burger` app. The app does a `POST` of user input to a MySQL database and updates the screen to reflect any additions. There are also `schema.sql` & `seeds.sql` files to set up the database and add the initial values.
+## About Eat Da Burger
+
+The user inputs the burger(s) they would like to eat to the `Eat Da Burger` app. The app does a `POST` of user input to a MySQL database and updates the screen to reflect any additions. There are also `schema.sql` & `seeds.sql` files to set up the database and add the initial values.
 
 Each item has a button that allows the user to chose a burger to 'devour'. Clicking that button triggers a `PUT`, which updates the values in the database to reflect that the burger has been eaten, and the screen is updated to reflect this change.
 
-## Technical Details
+---
+
+## Description of the problem:
+
+`Eat Da Burger` needed a way to store user-entered data with persistence, display that data onscreen, and update the onscreen display when the user adds an additional item or changes its state.
+
+## Technical Solutions:
+
+A MySQL database was used to store user data. The database was managed locally for testing using MAMP and MySQL Workbench. Heroku was used to host the database remotely for production. Burgers are given a state of undevoured when created, and are rendered into the `Burgers to eat!` column. Once the user clicks the devour button, the state is changed to devoured, the database is updated, and it is rendered to the `Burgers that have been eaten` column.
+
+---
+
+## Technical details:
 
 - This app uses the `Model-View-Controller (MVC)` Architecture.
   - The `Model` contains the data that is created or updated. This data exists in a MySQL database, and is supplied in the form of `schema.sql` & `seeds.sql` files. A JavaScript file containing jQuery interacts with this data.
@@ -41,27 +55,37 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 
 1. If not installed already, download & install `Node.js` on your computer.
 
-2. Copy all the supplied the files to the directory you wish to run `Eat da Burger` from.
+2. Copy all the supplied the files to the directory you wish to run `Eat Da Burger` from.
 
 3. At the command line, navigate to the directory where the server.js file is located and type `npm i` - this will read the `package.json` file and install any needed packages. They will be installed into a node_modules folder.
 
 4. Open `connection.js` in a text editor and change the connection info as needed to match the settings in your MySQL server and save it. In `server.js` take note of the port number at the top. If you are on a Mac, the port number in `connection.js` should be 8889; on a Windows machine, it should be 3306.
 
-#### How to use Eat da Burger locally:
+#### How to use Eat Da Burger locally:
 
 1. Navigate in the command line to the directory where the server.js file located. Type `node server` at the prompt. This will run the server portion of the app.
 
 2. Open a new web browser window. Type `localhost:3000/index` to run the client portion of the app.
 
-## Technologies used:
+---
 
-- Express npm package - https://www.npmjs.com/package/express
-- Google Fonts - https://fonts.google.com/
-- Handlebars templating engine - https://handlebarsjs.com/
-- Heroku - for deployment - https://heroku.com
+## Demo:
+
+## ![Eat-Da-Burger app](public/assets/gifs/eat_da_burger_demo.gif)
+
+## Built with:
+
+- [Express npm package](https://www.npmjs.com/package/express)
+- [Google Fonts](https://fonts.google.com/)
+- [Handlebars templating engine](https://handlebarsjs.com/)
+- [Heroku](https://heroku.com)
 - JavaScript
-- jQuery - http://jquery.com/
-- MySQL Workbench - https://www.mysql.com/products/workbench/
-- MAMP local server - https://www.mamp.info/en/
-- Node.js - https://nodejs.org
-- Twitter Bootstrap CSS framework - http://getbootstrap.com/
+- [jQuery](http://jquery.com/)
+- [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- [MAMP local server](https://www.mamp.info/en/)
+- [Node.js](https://nodejs.org)
+- [Twitter Bootstrap CSS framework](http://getbootstrap.com/)
+
+## Authors:
+
+`Eat Da Burger` was coded by me, and is maintained by me.
