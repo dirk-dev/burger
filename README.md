@@ -28,12 +28,14 @@ Each item has a button that allows the user to chose a burger to 'devour'. Click
 
 ## Technical details:
 
+- jQuery is used to collect user input and pass it to the database, as well as reload the page, via AJAX calls.
+- Handlebars is used to create the HTML views. The `main.handlebars` file contains the HTML including links to the stylesheets and jQuery library, as well as the handlebars `{{{body}}}` tag. The `index.handlebars` file contains the HTML body to display the complete webpage, including the buttons to change the burger state, the form for user input, and the handlebars tags for the database records.
+
+## How the App is Organized:
 - This app uses the `Model-View-Controller (MVC)` Architecture.
   - The `Model` contains the data that is created or updated. This data exists in a MySQL database, and is supplied in the form of `schema.sql` & `seeds.sql` files. A JavaScript file containing jQuery interacts with this data.
   - The `Views` component is all of the front-end code in the form of 2 Handlebars files which display the contents of the database onscreen.
   - The `Controller` component is the intermediary between the `Model` (database) and `Views` (HTML front end).
-- jQuery is used to collect user input and pass it to the database, as well as reload the page, via AJAX calls.
-- Handlebars is used to create the HTML views. The `main.handlebars` file contains the HTML including links to the stylesheets and jQuery library, as well as the handlebars `{{{body}}}` tag. The `index.handlebars` file contains the HTML body to display the complete webpage, including the buttons to change the burger state, the form for user input, and the handlebars tags for the database records.
 
 ## How to Run the App Locally:
 
